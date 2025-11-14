@@ -1,29 +1,20 @@
-#include "client.c"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "cliente.h"
 
-int main() {
+int main()
+{
 
-  noClient *lista = criarLista();
-  Client c;
-  c.num = 1;
-  c.telephone = 987654356;
-  strcpy(c.name, "iva");
-  c.dataNasc.ano = 2025;
-  c.dataNasc.mes = 12;
-  c.dataNasc.dia = 1;
-  printf("%d", c.dataNasc.ano);
-  /*
-  Client c1;
-    c1.num = 2;
-    c1.telephone = 987654356;
-    strcpy(c1.name, "alguem");
-    c1.dataNasc.ano = 2025;
-    c1.dataNasc.mes = 6;
-    c1.dataNasc.dia = 15;*/
-  lista = addNo(lista, c);
-  /* addNo(lista, c1); */
+  noCliente *lista = criarLista();
 
-  listarClient(lista);
+  // ⭐ Adicionando 4 elementos do nada so para testar msm...
+  lista = addNo(lista, 1, "Carlos Alberto", 923111222, 10, 5, 2002);
+  lista = addNo(lista, 2, "Maria João", 923555444, 21, 3, 1999);
+  lista = addNo(lista, 3, "Pedro Silva", 922777666, 30, 8, 2001);
+  lista = addNo(lista, 4, "Ana Ferreira", 921999888, 15, 1, 2000);
+
+  imprimir(lista);
+
+  return 0;
 }
