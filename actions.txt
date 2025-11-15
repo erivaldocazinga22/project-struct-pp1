@@ -1,8 +1,0 @@
-Commit Actions  --> 14/11/2025 By Diangienda
-
-1- Já não há structs Cliente e Data, tudo existe na struct noCliente
-    1.1- Em consequencia, os parametros das funcoes sao os dados do cliente e nao o cliente em si
-
-2- Para melhor entendimento, ha predominancia da lingua portuguesa nos codigos
-
-3- O nome da funcao listarClientes passou a ser imprimir
