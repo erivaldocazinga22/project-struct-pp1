@@ -1,12 +1,15 @@
-typedef struct no noClient;
-typedef struct client Client;
-typedef struct data Data;
+#ifndef client_H
+#define client_H
 
-noClient *criarLista();
-void listarClient(noClient *l);
-noClient *criarNo(Client c);
-noClient *addNo(noClient *l, Client c);
-noClient *pesquisarNo(noClient *l, int num);
-void removerNo(noClient *l, int num);
-noClient *removeRepit(noClient *l);
-void imprimirInOrderNasc(noClient *l);
+typedef struct no noCliente;
+
+noCliente *criarLista();
+noCliente *criarNo(int numero,char *nome, int telefone, int dia,int mes,int ano);
+noCliente *addNo(noCliente *l, int numero,char *nome, int telefone, int dia,int mes,int ano);
+noCliente *removerNo(noCliente *l,int num);
+noCliente *removeRepeticoes(noCliente *l);
+noCliente *imprimirInOrderNasc(noCliente *l);
+void imprimir(noCliente *l);
+void pesquisarNo(noCliente *l, int num);
+
+#endif
