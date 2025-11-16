@@ -15,4 +15,8 @@ void imprimir(noCliente *l);
 void pesquisarNo(noCliente *l, int num);
 int compararNascimento(const void *a, const void *b);
 
+int contarClientes(noCliente *lista);
+float calcularIdadeMedia(noCliente *lista);
+int calcularIdade(int dia, int mes, int ano);
+
 #endif
